@@ -1,0 +1,20 @@
+{
+  "name": "cordova_plugin_bluetooth",
+  "version": "1.0.0",
+  "description": "Cordova Bluetooth Plugin",
+  "cordova": {
+    "id": "cordova-plugin-bluetooth",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "bluetooth",
+    "android",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Kenneth Liang",
+  "license": "MIT"
+}

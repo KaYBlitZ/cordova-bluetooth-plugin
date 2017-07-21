@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-bluetooth"
+		version="1.0.0">
+    <name>Bluetooth</name>
+    <description>Cordova Bluetooth Plugin</description>
+    <license>MIT</license>
+	<author>Kenneth Liang</author>
+    <keywords>cordova,bluetooth,android</keywords>
+	
+    <js-module src="www/bluetooth.js" name="bluetooth">
+        <clobbers target="bluetooth" />
+    </js-module>
+	
+    !-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Bluetooth" >
+                <param name="android-package" value="org.kayblitz.cordova.Bluetooth"/>
+            </feature>
+        </config-file>
+		<config-file target="AndroidManifest.xml" parent="/*">
+			<uses-permission android:name="android.permission.BLUETOOTH" />
+			<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+			!-- For Marshmallow BT start discovery -->
+			<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+		</config-file>
+
+        <source-file src="src/android/Bluetooth.java" target-dir="src/org/kayblitz/cordova" />
+    </platform>
+</plugin>
